@@ -44,8 +44,8 @@ const BenefitCard = ({ icon: Icon, title, description }: { icon: any; title: str
 );
 
 const GoalCard = ({ title }: { title: string }) => (
-  <div className="bg-white p-4 rounded-lg shadow-sm border border-purple-100 hover:shadow-md transition-shadow">
-    <p className="text-gray-700">{title}</p>
+  <div className="bg-white p-6 rounded-lg shadow-sm border border-purple-100 hover:shadow-md transition-shadow">
+    <p className="text-gray-700 text-lg leading-relaxed">{title}</p>
   </div>
 );
 
@@ -126,17 +126,17 @@ const Index = () => {
       </section>
 
       {/* Goals Section */}
-      <section id="goals" className="py-20 px-4 bg-purple-50">
+      <section id="goals" className="py-20 px-4 bg-gradient-to-b from-purple-50/50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Our Goals
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 mb-12">
               We're transforming how service providers handle invoicing and payments
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               "Eliminate manual invoice creation and tracking",
               "Ensure timely payments through automated reminders",
