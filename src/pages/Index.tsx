@@ -1,5 +1,7 @@
 import { FileText, Clock, Users, DollarSign, CheckCircle, MessageSquare, BarChart2, AlertCircle, Mail, Bell, History } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NavigationMenu } from "@/components/ui/navigation-menu";
+import { NavBar } from "@/components/NavBar";
 
 const Stats = () => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-12">
@@ -50,6 +52,7 @@ const GoalCard = ({ title }: { title: string }) => (
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <NavBar />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-purple-50 to-white py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -82,7 +85,7 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 px-4 bg-white">
+      <section id="problem" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold text-gray-600 mb-4">The Payment Problem</h2>
@@ -123,7 +126,7 @@ const Index = () => {
       </section>
 
       {/* Goals Section */}
-      <section className="py-20 px-4 bg-purple-50">
+      <section id="goals" className="py-20 px-4 bg-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -149,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* Core Features Section */}
-      <section className="py-20 px-4 bg-white">
+      <section id="features" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -199,7 +202,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-purple-50">
+      <section id="benefits" className="py-20 px-4 bg-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
