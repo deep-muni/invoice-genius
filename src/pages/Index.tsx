@@ -1,5 +1,4 @@
-
-import { FileText, Clock, Users, DollarSign, CheckCircle, MessageSquare, BarChart2, AlertCircle } from "lucide-react";
+import { FileText, Clock, Users, DollarSign, CheckCircle, MessageSquare, BarChart2, AlertCircle, Mail, Bell, History } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Stats = () => (
@@ -42,6 +41,12 @@ const BenefitCard = ({ icon: Icon, title, description }: { icon: any; title: str
   </div>
 );
 
+const GoalCard = ({ title }: { title: string }) => (
+  <div className="bg-white/50 p-4 rounded-lg border border-purple-100">
+    <p className="text-gray-700">{title}</p>
+  </div>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -50,18 +55,17 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Streamline Client Invoicing Effortlessly
+              No More Chasing Payments Manually!
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Transform complex employee timesheets into professional invoices in seconds. 
-              Reclaim hours of manual work each month and ensure billing accuracy.
+              Transform your invoicing workflow from chaos to clarity. Automated reminders, real-time tracking, and professional follow-ups all in one place.
             </p>
             <div className="flex gap-4 justify-center mb-12">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
-                Get Started Now
+                Request Early Access
               </Button>
               <Button size="lg" variant="outline">
-                Book a Demo
+                Watch Demo
               </Button>
             </div>
             <div className="flex items-center justify-center gap-2 text-gray-600">
@@ -83,28 +87,33 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-semibold text-gray-600 mb-4">The Payment Problem</h2>
             <h3 className="text-4xl font-bold text-gray-900 mb-6">
-              Service Providers Are Losing Money
+              Service Providers Are Losing Time & Money
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Delayed payments and manual follow-ups are costing businesses thousands in lost time and cash flow
+              Manual invoicing and payment tracking are costing businesses thousands in lost time, delayed payments, and poor client relationships
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Clock,
                 title: "Manual Invoice Generation",
-                description: "Hours wasted creating invoices from scratch for every billing cycle."
+                description: "Hours wasted creating and sending invoices manually each month."
               },
               {
-                icon: AlertCircle,
-                title: "Forgotten Payment Reminders",
-                description: "Missing the right timing to send reminders leads to further delays."
+                icon: Bell,
+                title: "Forgotten Reminders",
+                description: "Missing payment deadlines due to inconsistent follow-ups."
               },
               {
-                icon: DollarSign,
+                icon: History,
                 title: "No Payment Visibility",
-                description: "No clear system to track who paid, who didn't, and what's outstanding."
+                description: "Lack of real-time tracking on payment status and history."
+              },
+              {
+                icon: MessageSquare,
+                title: "Poor Client Experience",
+                description: "Unprofessional follow-ups damaging client relationships."
               }
             ].map((problem, i) => (
               <ProblemCard key={i} {...problem} />
@@ -113,38 +122,74 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* Goals Section */}
       <section className="py-20 px-4 bg-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Automate Your Entire Invoicing Workflow
+              Our Goals & Objectives
             </h2>
-            <p className="text-xl text-gray-600">
-              From employee timesheets to professional PDF invoices with just a few clicks
+            <p className="text-xl text-gray-600 mb-8">
+              We're transforming how service providers handle invoicing and payments
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              "Eliminate manual invoice creation and tracking",
+              "Ensure timely payments through automated reminders",
+              "Provide clear visibility into payment status",
+              "Improve client communication and experience",
+              "Enable data-driven financial decisions",
+              "Streamline the entire billing workflow"
+            ].map((goal, index) => (
+              <GoalCard key={index} title={goal} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Features Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Powerful Features for Modern Businesses
+            </h2>
+            <p className="text-xl text-gray-600">
+              Everything you need to streamline your invoicing workflow
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: CheckCircle,
-                title: "Automated Calculations",
-                description: "Instantly converts employee hours into accurate billable amounts based on fixed rates."
-              },
-              {
-                icon: Users,
-                title: "Team Management",
-                description: "Easily assign team members to clients and track their 40-hour workweeks efficiently."
-              },
-              {
                 icon: FileText,
-                title: "Professional Invoices",
-                description: "Generate branded PDF invoices with detailed breakdowns of hours, rates, and totals."
+                title: "Auto-generated Invoices",
+                description: "Create professional invoices automatically from your timesheet data."
               },
               {
                 icon: DollarSign,
-                title: "Client Management",
-                description: "Maintain client records and invoice history for seamless billing continuity."
+                title: "Smart Payment Tracking",
+                description: "Real-time visibility into payment status, history, and forecasts."
+              },
+              {
+                icon: Clock,
+                title: "Delayed Payment Reports",
+                description: "Instant insights into overdue payments and payment patterns."
+              },
+              {
+                icon: Mail,
+                title: "Automated Reminders",
+                description: "Multi-channel payment reminders via email, WhatsApp, and SMS."
+              },
+              {
+                icon: MessageSquare,
+                title: "Feedback Collection",
+                description: "Gather client feedback automatically after payment completion."
+              },
+              {
+                icon: BarChart2,
+                title: "Performance Dashboard",
+                description: "Comprehensive KPIs and reports for organization owners."
               }
             ].map((feature, i) => (
               <FeatureCard key={i} {...feature} />
@@ -154,32 +199,37 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Experience Transformative Value
+              Transform Your Business
             </h2>
             <p className="text-xl text-gray-600">
-              See the impact across your entire organization with these key benefits
+              See immediate results across your entire organization
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Clock,
                 title: "Save 15+ Hours",
-                description: "Reclaim finance team time each month by eliminating manual calculations."
+                description: "Eliminate manual invoice creation and follow-ups."
               },
               {
                 icon: DollarSign,
-                title: "Increase Revenue",
-                description: "Capture all billable hours with precision, eliminating revenue leakage."
+                title: "Faster Payments",
+                description: "Reduce average payment time by 60% with smart reminders."
+              },
+              {
+                icon: Users,
+                title: "Better Relationships",
+                description: "Maintain professional communication with clients."
               },
               {
                 icon: BarChart2,
-                title: "Scale Effortlessly",
-                description: "Maintain invoicing efficiency as your team and client base grows."
+                title: "Data-Driven Insights",
+                description: "Make informed decisions with comprehensive analytics."
               }
             ].map((benefit, i) => (
               <BenefitCard key={i} {...benefit} />
@@ -189,20 +239,20 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-purple-50">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Invoicing Process?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Join the finance teams who've simplified their invoicing workflow and reclaimed valuable time.
+            Join the finance teams who've automated their invoicing workflow and improved client relationships.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
-              Get Started Now →
+              Request Early Access →
             </Button>
             <Button size="lg" variant="outline">
-              Book a Demo
+              Schedule Demo
             </Button>
           </div>
         </div>
