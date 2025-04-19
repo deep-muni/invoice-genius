@@ -45,6 +45,7 @@ In this project, we leveraged a combination of cutting-edge tools and platforms 
 2. **UI/UX Enhancement**: To improve the application's look and feel, we integrated Lovable into the development process. This allowed us to create a more intuitive and attractive user interface.
 
 3. **Jira Task Management**: Claude Code was used to automatically create Jira tickets based on our ongoing tasks and project needs. This helped keep the project organized and on track.
+![image](https://github.com/user-attachments/assets/ca63ca99-9d60-455e-a539-15095c883b55)
 
 4. **Content Creation**: GPT and Claude Chat were used for content generation, including writing the initial marketing website, defining project requirements, and generating necessary prompts for task automation.
 
